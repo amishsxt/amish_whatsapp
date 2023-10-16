@@ -15,25 +15,25 @@
         android:theme="@style/Theme.Amish_WhatsApp"
         tools:targetApi="31">
         <activity
-            android:name=".view.HomeActivity"
+            android:name=".Views.Home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".view.OtpActivity"
+            android:name=".Views.Auth.OtpActivity"
             android:exported="false" />
         <activity
-            android:name=".view.CountryCodeActivity"
+            android:name=".Views.Auth.CountryCodeActivity"
             android:exported="false" />
         <activity
-            android:name=".view.PhoneNumberActivity"
+            android:name=".Views.Auth.PhoneNumberActivity"
             android:exported="false" />
         <activity
-            android:name=".view.WelcomeActivity"
+            android:name=".Views.Auth.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".view.LanguageActivity"
+            android:name=".Views.Auth.LanguageActivity"
             android:exported="false" />
         <activity
-            android:name=".view.SplashActivity"
+            android:name=".Views.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
