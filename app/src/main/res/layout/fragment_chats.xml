@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.tabs.ChatsFragment"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="API Data"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sdp"
+        android:fontFamily="@font/f_medium"/>
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Can't fetch the data please check your internet connection!"
+        android:textColor="@color/grey2"
+        android:textSize="@dimen/_15sdp"
+        android:fontFamily="@font/f_regular"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="50dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:backgroundTint="@color/transparent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/parentRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Amish_WhatsApp" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <item name="colorPrimary">@color/my_green</item>
+        <item name="android:colorPrimaryDark">@color/bg_color</item>
+        <item name="android:windowBackground">@color/bg_color</item>
+        <item name="colorSecondary">@color/light_green</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+        <item name="colorOutline">@color/my_green</item>
+        <item name="colorSurfaceContainerHigh">@color/dialog_box_bg</item>
+        <item name="colorOnSurfaceVariant">@color/grey2</item>
+
+    </style>
+</resources>

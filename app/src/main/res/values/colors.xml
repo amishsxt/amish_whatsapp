@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    //custom colors
+    <color name="bg_color">#121B22</color>
+    <color name="bg2_color">#182329</color>
+    <color name="bg_dark">#1F2C34</color>
+    <color name="grey2">#8596A0</color>
+    <color name="my_green">#00A884</color>
+    <color name="teal_green">#128C7E</color>
+    <color name="teal_green_dark">#075E54</color>
+    <color name="light_green">#25D366</color>
+    <color name="sky_blue">#34B7F1</color>
+    <color name="grey">#888888</color>
+    <color name="light">#0DFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="dialog_box_bg">#2A3B45</color>
+    <color name="header">#1F2C34</color>
+
+</resources>
