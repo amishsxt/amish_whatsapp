@@ -19,6 +19,7 @@ public class ParentViewHolder extends RecyclerView.ViewHolder {
     ImageView arrowStatus;
     LinearLayout groupCard;
     boolean status = false;
+    int clickedCount = 0;
 
     public ParentViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -53,5 +54,10 @@ public class ParentViewHolder extends RecyclerView.ViewHolder {
         arrowStatus.setImageResource(R.drawable.down_key_ic);
 
         status=false;
+    }
+
+    public void clickedOnce(){
+        selectBtn.setBackgroundColor(itemView.getResources().getColor(R.color.grey2));
+        clickedCount = 1;
     }
 }

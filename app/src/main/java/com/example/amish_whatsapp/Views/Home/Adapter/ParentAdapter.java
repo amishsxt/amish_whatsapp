@@ -49,7 +49,14 @@ public class ParentAdapter extends RecyclerView.Adapter<ParentViewHolder> {
         holder.selectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectAll(holder);
+                if(holder.clickedCount == 0){
+                    selectAll(holder);
+                    holder.clickedOnce();
+                }
+                else{
+
+                }
+
             }
         });
     }
