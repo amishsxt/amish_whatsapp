@@ -34,12 +34,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainViewHolder> {
         holder.quantity.setText(list.get(position).getProduct_qty()
                 + " " + list.get(position).getUnit_name());
 
-        if(list.get(position).getOrder_status().equals("Pending")){
-            holder.setNotDelivered();
-        }
-        else {
-            holder.setDelivered();
-        }
+//        if(list.get(position).getOrder_status().equals("Pending")){
+//            holder.setNotDelivered();
+//        }
+//        else {
+//            holder.setDelivered();
+//        }
 
         //image loading
         holder.setItemImage(list.get(position).getProduct_img_url());

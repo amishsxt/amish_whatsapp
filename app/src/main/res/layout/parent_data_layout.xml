@@ -38,13 +38,21 @@
                     android:textSize="@dimen/_16sdp"
                     android:fontFamily="@font/f_medium"
                     android:layout_weight="1"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/selectBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select all"
+                    android:visibility="gone"
+                    android:layout_marginEnd="10dp"/>
                 
                 <ImageView
                     android:id="@+id/groupStatusArrow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/down_key_ic"
-                    app:tint="@color/white"/>
+                    app:tint="@color/white" />
                 
             </LinearLayout>
 

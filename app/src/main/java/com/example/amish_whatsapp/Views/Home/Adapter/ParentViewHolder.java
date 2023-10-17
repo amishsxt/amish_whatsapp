@@ -9,10 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.amish_whatsapp.R;
+import com.google.android.material.button.MaterialButton;
 
 public class ParentViewHolder extends RecyclerView.ViewHolder {
 
     RecyclerView recyclerView;
+    MaterialButton selectBtn;
     TextView groupName;
     ImageView arrowStatus;
     LinearLayout groupCard;
@@ -25,6 +27,7 @@ public class ParentViewHolder extends RecyclerView.ViewHolder {
         arrowStatus=itemView.findViewById(R.id.groupStatusArrow);
         groupCard=itemView.findViewById(R.id.groupCard);
         recyclerView=itemView.findViewById(R.id.parentRecyclerView);
+        selectBtn=itemView.findViewById(R.id.selectBtn);
     }
 
     public void groupClicked(){
@@ -38,6 +41,7 @@ public class ParentViewHolder extends RecyclerView.ViewHolder {
 
     public void expandGroup(){
         recyclerView.setVisibility(View.VISIBLE);
+        selectBtn.setVisibility(View.VISIBLE);
         arrowStatus.setImageResource(R.drawable.up_key_ic);
 
         status=true;
@@ -45,6 +49,7 @@ public class ParentViewHolder extends RecyclerView.ViewHolder {
 
     public void collapseGroup(){
         recyclerView.setVisibility(View.GONE);
+        selectBtn.setVisibility(View.GONE);
         arrowStatus.setImageResource(R.drawable.down_key_ic);
 
         status=false;
