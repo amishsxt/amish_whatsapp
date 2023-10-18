@@ -11,17 +11,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.amish_whatsapp.Model.DataModel.GroupData;
 import com.example.amish_whatsapp.R;
+import com.example.amish_whatsapp.Views.BottomSheet.MyBottomSheet;
 
 import java.util.List;
 
-public class ParentAdapter extends RecyclerView.Adapter<ParentViewHolder> {
+public class ParentAdapter extends RecyclerView.Adapter<ParentViewHolder> implements MainAdapter.SelectAllButton {
 
     private Context context;
     private List<GroupData> arrayList;
+    private MyBottomSheetListener listener;
+   //private int totalDelivered=0;
 
     public ParentAdapter(Context context, List<GroupData> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
+        listener = (MyBottomSheetListener) context;
     }
 
 
@@ -33,6 +37,7 @@ public class ParentAdapter extends RecyclerView.Adapter<ParentViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ParentViewHolder holder, int position) {
+
         holder.groupName.setText(arrayList.get(position).getGroup_name());
 
         ChildAdapter childAdapter = new ChildAdapter(context, arrayList.get(position).getGroup_data());
@@ -54,9 +59,12 @@ public class ParentAdapter extends RecyclerView.Adapter<ParentViewHolder> {
                     holder.clickedOnce();
                 }
                 else{
-
+                    int totalDelivered = 0;
+                    for(int i=0; i<arrayList.get(position).getGroup_data().size(); i++){
+                        totalDelivered+=arrayList.get(position).getGroup_data().get(i).getOrder_detail().size();
+                    }
+                    listener.showBottomSheet(totalDelivered);
                 }
-
             }
         });
     }
@@ -84,5 +92,19 @@ public class ParentAdapter extends RecyclerView.Adapter<ParentViewHolder> {
             }
         }
 
+    }
+
+    @Override
+    public void firstState() {
+
+    }
+
+    @Override
+    public void secondState() {
+
+    }
+
+    public interface MyBottomSheetListener{
+        public void showBottomSheet(int count);
     }
 }

@@ -17,10 +17,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainViewHolder> {
 
     private Context context;
     private List<OrderDetail> list;
+    private SelectAllButton selectAllButton;
 
     public MainAdapter(Context context, List<OrderDetail> list) {
         this.context = context;
         this.list = list;
+        //selectAllButton = (SelectAllButton) context;
     }
 
     @NonNull
@@ -56,5 +58,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainViewHolder> {
     @Override
     public int getItemCount() {
         return list.size();
+    }
+
+    public interface SelectAllButton{
+        public void firstState();
+
+        public void secondState();
     }
 }

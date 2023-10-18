@@ -14,10 +14,12 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.amish_whatsapp.R;
 import com.example.amish_whatsapp.Views.Auth.WelcomeActivity;
+import com.example.amish_whatsapp.Views.BottomSheet.MyBottomSheet;
+import com.example.amish_whatsapp.Views.Home.Adapter.ParentAdapter;
 import com.example.amish_whatsapp.Views.Home.Adapter.ViewPagerAdapter;
 import com.example.amish_whatsapp.databinding.ActivityHomeBinding;
 
-public class HomeActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
+public class HomeActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener, ParentAdapter.MyBottomSheetListener {
 
     private ActivityHomeBinding xml;
 
@@ -76,5 +78,12 @@ public class HomeActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         }
 
         return false;
+    }
+
+    @Override
+    public void showBottomSheet(int count) {
+        MyBottomSheet myBottomSheet = new MyBottomSheet();
+        myBottomSheet.show(getSupportFragmentManager(), MyBottomSheet.TAG);
+        myBottomSheet.setCount(String.valueOf(count));
     }
 }
